@@ -1,0 +1,42 @@
+@use 'hero';
+@use 'variables';
+@use 'components/infos_bar';
+@use 'components/buttons';
+@use 'components/event';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+@font-face {
+    font-family: sst;
+    src: url(../assets/fonts/SSTLight.TTF);
+    font-weight: 100;
+    color: variables.$textColor;
+}
+
+body{
+    background-color: #000;
+    color: variables.$textColor;
+    font-family: sst;
+}
+
+.title{
+    color: variables.$mainColor;
+}
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (max-width: 640px) {
+        
+        max-width: 80%;
+    }
+
+    @media (max-width: 1024px) {
+        
+        max-width: 90%;
+    }
+}

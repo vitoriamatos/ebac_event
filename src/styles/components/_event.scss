@@ -1,0 +1,70 @@
+@use '../variables';
+
+.event {
+    margin-bottom: 5rem;
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+
+        .event__details {
+
+            border-left: none;
+            border-right: 2px solid variables.$mainColor;
+            ;
+
+        }
+
+
+    }
+
+    .container {
+        display: flex !important;
+        gap: 40px;
+    }
+
+    &__details {
+
+        border-left: 2px solid variables.$mainColor;
+        padding-left: 20px;
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        &__description {
+            font-size: 22px;
+        }
+
+        &__image {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block !important;
+        }
+
+        &__details {
+            border-left: none;
+            margin-bottom: 16px;
+
+            &__image {
+                width: 90%;
+                margin-left: 20px;
+
+            }
+        }
+
+        &--image-left {
+
+            .event__details {
+
+                border-right: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use '../variables';
+
+.button {
+    margin: 0 auto;
+        display: block;
+        padding: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: variables.$mainColor;
+        font-size: 20px;
+        width: 15rem;
+        white-space: nowrap;
+        color: variables.$textColor;
+
+        &:hover{
+            background-color: variables.$hoverMainColor;
+        }
+        @media (max-width: 640px) {
+            display: block;
+            width: 100%;
+        }
+}
